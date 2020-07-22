@@ -2,6 +2,11 @@
 @import 'global';
 @import 'fonts';
 
+
+
+// START HEADER
+
+
 .header__top-inner{
     display: flex;
     justify-content: space-between;
@@ -50,6 +55,11 @@
         font-size: 14px;
     }
 }
+
+
+// END PRODUCTS
+// START SEARCH
+
 
 .search{
     background-repeat: no-repeat;
@@ -103,4 +113,124 @@
     }
 }
 
-  
+
+// END PRODUCTS
+// START PRODUCTS
+
+
+.products{
+    padding: 110px 0;
+    background-color: $grey;
+}
+.products__inner-btn{
+    text-align: center;
+    margin-bottom: 60px;
+    button{
+        padding: 12px 21px;
+        border: none;
+        border-radius: 0px;
+        background-color: #fff;
+        color: $bg;
+        cursor: pointer;
+        & + button{
+            margin-left: 5px;
+        }
+        &.mixitup-control-active{
+            background-color: $red;
+            color: #fff;
+        }
+    }
+}
+.products__inner-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product__item{
+    max-width: 442px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    margin-bottom: 32px;
+    &-img{
+        min-height: 250px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: block;
+    }
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        min-height: 90px;
+        align-items: center;
+        font-weight: 500;
+        border-bottom: 1px solid #e7ecf2;
+    }
+    &-name{
+        max-width: 310px;
+    }
+    &-title{
+        color: $bg;
+        font-size: 18px;
+        line-height: 27px;
+        display: block;
+    }
+    &-category{
+        display: block;
+        font-size: 14px;
+        color: $green;
+    }
+    &-price{
+        font-size: 20px;
+        color: $bg;
+        font-weight: 700;
+    }
+    &-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        padding: 10px 30px;
+    }
+    &-author{
+        display: flex;
+        align-items: center;
+        .avatar{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-size: cover;
+            margin-right: 14px;    
+        }
+        span{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+    }
+}
+.products__bottom-btn{
+    text-align: center;
+    margin-top: 45px;
+    button{
+        padding: 20px 30px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 0px;
+        background-color: #fff;
+        color: $bg;
+        cursor: pointer;
+        &.mixitup-control-active{
+            background-color: $red;
+            color: #fff;
+        }
+    }
+}
+
+
+// END PRODUCTS  
