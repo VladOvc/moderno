@@ -366,3 +366,41 @@
 
 
 // end advantages
+// start autohor
+
+.author{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.author__box{
+    max-width: 650px;
+    min-height: 215px;
+    width: 100%;
+    background-color: $green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.author__title{
+    color: #fff;
+    font-size: 30px;
+    line-height: 36px;
+    max-width: 275px;
+    margin-right: 45px;
+    span{
+        @include f700
+    }
+}
+.author__link{
+    display: block;
+    color: $bg;
+    background-color: #fff;
+    font-size: 18px;
+    padding: 22px 40px;
+}
+// end autohor
