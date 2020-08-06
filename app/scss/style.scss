@@ -403,4 +403,194 @@
     font-size: 18px;
     padding: 22px 40px;
 }
+
+
 // end autohor
+// start tutorial
+
+.tutorial{
+    padding: 70px 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 370px;
+        width: 100%;
+        margin: 0 5px;
+    }
+}
+.tutorial__item{
+    &-images{
+        min-height: 270px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &-title{
+        color: $bg;
+        @include f700;
+        font-size: 24px;
+        text-align: center;
+        background-color: #f8f8f8;
+        padding: 35px 10px;
+    }
+}
+
+
+// end tutorial
+// start footer
+
+.footer{
+    background-color: $bg;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0px 80px;
+    }
+}
+.footer__copy{
+    border-top: 1px solid #919699;
+}
+.footer__copy-text{
+    text-align: center;
+    font-size: 15px;
+    color: #919699;
+    padding: 25px 0;
+}
+.footer__col{
+    max-width: 270px;
+    width: 100%;
+    &-menu{
+        max-width: 220px;
+    }
+    &-title{
+        font-family: 'Raleway', sans-serif;
+        font-size: 22px;
+        color: #fff;
+        padding-bottom: 22px;
+        margin-bottom: 30px;
+        position: relative;
+        &::after{
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: $green;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &-text{
+        color: #fff;
+        margin-bottom: 25px;
+    }
+}
+.footer__info{
+    margin-top: 18px;
+    @include f500;
+    color: #fff;
+    padding-left: 30px;
+    position: relative;
+    &::before{
+        content: '\f041';
+        font-family: 'icomoon';
+        font-size: 18px;
+        color: $green;
+        position: absolute;
+        left: 0;
+    }
+}
+.footer__info-phone{
+    &::before{
+        content: '\f095';
+    }
+}
+.footer__col-list{
+    a{
+        margin-bottom: 15px;
+        color: #b7c3c8;
+        padding-left: 22px;
+        position: relative;
+        &::before{
+            content: '\f105';
+            font-family: 'icomoon';
+            font-size: 18px;
+            color: $green;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+.footer__social-link{
+    margin-bottom: 33px;
+    li{
+        display: inline-block;
+        & + li{
+            margin-left: 7px;
+        }
+    }
+    a{
+        width: 28px;
+        height: 28px;
+        background-image: url(../images/css_sprites.png);
+    }
+}
+.link-facebook{
+
+}
+.link-twitter{
+    background: url('css_sprites.png') -28px -0;
+}
+.link-youtube{
+    background: url('css_sprites.png') -0 -28px;
+}
+.link-pinterest{
+    background: url('css_sprites.png') -28px -28px;
+}
+.link-linkedin{
+    background: url('css_sprites.png') -56px -0;
+}
+.footer__form-title{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.footer__form{
+    position: relative;
+    input{
+        border: none;
+        background-color: #2f3c43;
+        height: 40px;
+        width: 100%;
+        padding-left: 13px;
+        padding-right: 50px;
+        color: #fff;
+        font-size: 14px;
+        display: block;
+        &::placeholder{
+            color: #697378;
+        }
+    }
+    button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 43px;
+        height: 40px;
+        border: none;
+        background-color: $green;
+        cursor: pointer;
+        &::before{
+            content: "\f124";
+            position: absolute;
+            top: 10px;
+            left: 13px;
+            font-family: 'icomoon';
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+}
+// end footer
+
