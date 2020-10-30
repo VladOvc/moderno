@@ -27,6 +27,7 @@ body{
     font-size: 15px;
     line-height: 24px;
     color: $text;
+    overflow-x: hidden;
 }
 .wrapper {
 	display: flex;
@@ -93,5 +94,18 @@ body{
         a{
             color: #b0bec5;
         }
+    }
+}
+.angle-right{
+    position: relative;
+    padding-left: 15px;
+    &::before{
+        content: "\f105";
+        font-family: 'icomoon';
+        color: $green;
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 }
