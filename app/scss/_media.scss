@@ -1,0 +1,133 @@
+@media (max-width: 1150px){
+    .header__text{
+        display: none;
+    }
+    .footer__inner{
+        flex-wrap: wrap;
+    }
+    .footer__col-adress{
+        min-width: 100%;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 900px){
+    .footer__col-social{
+        min-width: 100%;
+        margin-top: 20px;
+    }
+    .footer__inner{
+        justify-content: center;
+    }
+    .foter__col-menu{
+        margin-bottom: 30px;
+    }
+    .header__logo{
+        margin-left: 45px;
+    }
+    .header__menu{
+        height: 0;
+    }
+    .menu__btn{
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        div{
+            height: 3px;
+            background-color: #000;
+            & + div{
+                margin-top: 5px;
+            }
+        } 
+    }
+    .header__top-inner{
+        height: 70px;
+        position: relative;
+    }
+    .header__menu
+    .menu__list{
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: $bg;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        li{
+            display: block;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 0;
+            & + li{
+                margin-left: 0;
+            }
+            &:last-child{
+                border-width: 4px;
+            }
+        }
+    }
+}
+@media (max-width: 680px){
+    .header__btn-user{
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-color: $bg;
+        position: relative;
+        top: 0;
+        right: -15px;
+        &::before{
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 35px;
+        }
+    }
+    .header__box{
+        position: absolute;
+        top: 70px;
+        right: -15px;
+        transform: translateX(190px);
+        padding: 20px 0;
+        z-index: 5;
+        transition: all .3s;
+        flex-direction: column;
+        width: 190px;
+        &.active{
+            transform: translateX(0px);
+            background-color: #fff;
+        }
+    }
+    .basket__box,
+    .message__box,
+    .notification__box{
+        margin: 0;
+        order: 2;
+        height: 65px;
+        &:hover{
+            &>div{
+                display: none;
+            }
+        }
+    }
+    .user__box{
+        order: 1;
+        margin: 0;
+    }
+    .header__btn{
+        order: 3;
+        margin-bottom: 10px;
+    }
+    .header__btn-register{
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 901px){
+    .menu__list{
+        display: block !important;
+    }
+}
