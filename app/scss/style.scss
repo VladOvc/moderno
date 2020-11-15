@@ -2057,7 +2057,26 @@
 	}
 }
 .profile-settings{
-
+	.tab{
+		&::before{
+			content: '';
+		}
+		&.i-user::before{
+			content: "\f007";
+		}
+		&.i-suitcase::before{
+			content: "\f0f2";
+		}
+		&.i-envelope-o::before{
+			content: "\f003";
+		}
+		&.i-comments-o::before{
+			content: "\f0e6";
+		}
+		&.i-users::before{
+			content: "\f0c0";
+		}
+	}
 }
 .personal-box{
 	padding: 35px 40px 25px 40px;
@@ -2099,6 +2118,8 @@
 		height: 15px;
 		border-radius: 3px;
 		background-color: $green;
+		background-image: url(../images/profile-line-bg.jpg);
+		background-repeat: repeat;
 	}
 }
 // end profile
