@@ -939,9 +939,6 @@
 		background-image: url(../images/css_sprites.png);
 	}
 }
-.link-facebook{
-
-}
 .link-twitter{
 	background: url('css_sprites.png') -28px -0;
 }
@@ -2122,6 +2119,148 @@
 		background-repeat: repeat;
 	}
 }
+
 // end profile
+// start upload
+
+.upload__inner{
+	background-color: #fff;
+	border: 1px solid #dedede;
+}
+.upload__title{
+	font-size: 24px;
+	line-height: 60px;
+	color: $bg;
+	border-bottom: 1px solid #d7d7d7;
+	padding: 2px 33px;
+	@include f500;
+}
+.upload__content{
+	padding: 43px 48px 40px 43px;
+}
+.upload__line{
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+	&-textarea{
+		align-items: start;
+	}
+	input, textarea{
+		width: 900px;
+		display: block;
+		border: 1px solid #dddddd;
+		background-color: #f9f9f9;
+		line-height: 24px;
+		padding: 7px 18px;
+		font-size: 15px;
+		color: $bg;
+		&::placeholder{
+			color: #707070;
+			font-size: 15px;
+			line-height: 24px;
+		}
+		&[type="file"]{
+			color: #707070;
+		}
+	}
+	label{
+		width: 160px;
+		padding-right: 15px;
+		font-size: 15px;
+		color: #444444;
+		span{
+			color: $green;
+			font-size: 24px;
+			padding-left: 3px;
+		}
+	}
+	textarea{
+		height: 150px;
+	}
+}
+.jq-selectbox{
+	width: 900px;
+}
+.jq-selectbox__select-text{
+	width: 900px !important;
+	display: block;
+	border: 1px solid #dddddd;
+	background-color: #f9f9f9;
+	line-height: 24px;
+	padding: 7px 18px;
+	font-size: 15px;
+	color: #707070;
+	cursor: pointer;
+}
+.jq-selectbox__dropdown{
+	width: 900px;
+	border: 1px solid #dddddd;
+	background-color: #fff;
+	left: 0px;
+	top: 39px !important;
+	ul li{
+		padding: 7px 18px;
+		&:hover{
+			background-color: #d8d8d8;
+			cursor: pointer;
+		}
+	}
+}
+.jq-selectbox__trigger-arrow{
+	position: absolute;
+	top: 50%;
+	right: 18px;
+	transform: translateY(-50%);
+	&:hover{
+		cursor: pointer;
+	}
+	&::before{
+		content: "\f0d7";
+		font-family: 'icomoon';
+	}
+}
+
+.jq-file{
+	width: 900px;
+	border: 1px solid #dddddd;
+	background-color: #f9f9f9;
+	line-height: 24px;
+	padding: 0 18px;
+	height: 40px;
+	font-size: 15px;
+	color: $bg;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	input{
+		cursor: pointer;		
+		z-index: 150;
+	}
+	&.focused{
+		border: 1px solid #000;
+	}
+}
+.jq-file__browse{
+	color: #444444;
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 'Roboto-Regular', sans-serif;
+	font-weight: 400;
+	border: 1px solid #dcdcdc;
+	padding: 0 13px;
+	position: absolute;
+	left: 8px;
+	top: 7px;
+	background-color: #fff;
+}
+.jq-file__name{
+	font-size: 12px;
+	line-height: 24px;
+	color: #707070;
+	font-family: 'Roboto-Regular', sans-serif;
+	font-weight: 400;
+	padding-left: 110px;
+}
+// end upload
 
 @import 'media';
