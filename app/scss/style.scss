@@ -545,7 +545,13 @@
 .products__inner-box{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
+	margin-left: -30px;
+	.product__item{
+		margin-left: 30px;
+		flex-basis: calc(25% - 30px);
+		max-width: 100%;
+	}
 }
 .product__item{
 	max-width: 442px;
@@ -655,6 +661,8 @@
 
 .product-slider{
 	padding: 110px 0 120px;
+	.slick-slide{
+	}
 	.slick-dots{
 		text-align: center;
 		margin-top: 20px;
@@ -712,6 +720,7 @@
 .advantages__item{
 	max-width: 370px;
 	text-align: center;
+	padding: 0 10px;
 	&:hover{
 		.advantages__item-images{
 			background-color: $green;
@@ -938,9 +947,6 @@
 		height: 28px;
 		background-image: url(../images/css_sprites.png);
 	}
-}
-.link-facebook{
-
 }
 .link-twitter{
 	background: url('css_sprites.png') -28px -0;
@@ -1192,12 +1198,13 @@
 }
 .product-page__items{
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 30px;
 	flex-wrap: wrap;
+	margin-bottom: 30px;
+	margin-left: -30px;
 	.product__item{
 		transition: all .3s;
-		max-width: 270px;
+		flex-basis: calc(33.3333% - 30px);
+		margin-left: 30px;
 		&-img{
 			min-height: 180px;
 		}
@@ -1265,6 +1272,7 @@
 .product__item{
 	&.list{
 		max-width: 100%;
+		flex-basis: 100%;
 		.product__item-img{
 			float: left;
 			width: 240px;
@@ -1339,24 +1347,25 @@
 .product-one{
 	margin-bottom: 100px;
 	&__content{
-		width: 870px;
+		max-width: 870px;
+		width: 100%;
 		margin-right: 31px;
 	}
 	&__aside{
 		width: 270px;
 	}
-	&__images-inner{
-		width: 100%;
+	&__images{
 		border: 1px solid #dfdfdf;
 		padding: 18px;
 		background-color: #fff;
-	}
-	&__images{
-		width: 830px;
-		height: 420px;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		display: flex;
+		width: fit-content;
+		width: 100%;
+		img{
+			width: 100%;
+			max-height: 420px;
+			object-fit: cover;
+		}
 	}
 	&__title{
 		padding: 25px 0;
@@ -1465,6 +1474,7 @@
 		line-height: 18px;
 		color: $bg;
 		@include f500;
+		display: block;
 	}
 	&__theme{
 		font-size: 12px;
@@ -1729,7 +1739,7 @@
 .about__inner{
 	background-color: #fff;
 	padding: 45px 50px 0;
-	text-align-last: left;
+	text-align: left;
 	h3{
 		margin: 0;
 		font-size: 20px;
@@ -1767,7 +1777,9 @@
 	}
 	&__info{
 		width: 230px;
+		min-width: 230px;
 		margin-left: 42px;
+		margin-right: 30px;
 		&-title{
 			font-size: 20px;
 			color: $bg;
@@ -1862,6 +1874,10 @@
 		border: 1px solid #dedede;
 		height: 100%;
 	}
+	.jq-selectbox__dropdown{
+		max-width: 540px;
+		width: 100%;
+	}
 	.tab{
 		font-size: 14px;
 		@include f500;
@@ -1896,6 +1912,9 @@
 		border: 1px solid #dedede;
 		padding: 0;
 	}
+}
+.page-box .jq-selectbox{
+	max-width: 540px;
 }
 .page-box__title{
 	font-size: 24px;
@@ -2017,17 +2036,20 @@
 	padding: 15px;
 }
 .profile__banner{
+	margin: 0 auto;
+	width: fit-content;
 	padding: 16px;
 	border: 1px solid #dedede;
 	background-color: #fff;
 	margin-bottom: 31px;
 }
 .profile__banner-images{
-	background-image: url(../images/banner.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	min-height: 332px;
+	display: flex;
+	img{
+		width: 100%;
+		object-fit: contain;
+		max-height: 332px;
+	}
 }
 .profile__items{
 	display: flex;
@@ -2057,7 +2079,26 @@
 	}
 }
 .profile-settings{
-
+	.tab{
+		&::before{
+			content: '';
+		}
+		&.i-user::before{
+			content: "\f007";
+		}
+		&.i-suitcase::before{
+			content: "\f0f2";
+		}
+		&.i-envelope-o::before{
+			content: "\f003";
+		}
+		&.i-comments-o::before{
+			content: "\f0e6";
+		}
+		&.i-users::before{
+			content: "\f0c0";
+		}
+	}
 }
 .personal-box{
 	padding: 35px 40px 25px 40px;
@@ -2099,8 +2140,287 @@
 		height: 15px;
 		border-radius: 3px;
 		background-color: $green;
+		background-image: url(../images/profile-line-bg.jpg);
+		background-repeat: repeat;
 	}
 }
+
 // end profile
+// start upload
+
+.upload__inner{
+	background-color: #fff;
+	border: 1px solid #dedede;
+	margin-bottom: 100px;
+}
+.upload__title{
+	font-size: 24px;
+	line-height: 60px;
+	color: $bg;
+	border-bottom: 1px solid #d7d7d7;
+	padding: 2px 33px;
+	@include f500;
+}
+.upload__content{
+	padding: 43px 48px 40px 43px;
+}
+.upload__line{
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+	&-textarea{
+		align-items: start;
+	}
+	input, textarea{
+		max-width: 900px;
+		width: 100%;
+		display: block;
+		border: 1px solid #dddddd;
+		background-color: #f9f9f9;
+		line-height: 24px;
+		padding: 7px 18px;
+		font-size: 15px;
+		color: $bg;
+		&::placeholder{
+			color: #707070;
+			font-size: 15px;
+			line-height: 24px;
+		}
+		&[type="file"]{
+			color: #707070;
+		}
+	}
+	label{
+		min-width: 160px;
+		padding-right: 15px;
+		font-size: 15px;
+		color: #444444;
+		span{
+			color: $green;
+			font-size: 24px;
+			padding-left: 3px;
+		}
+	}
+	textarea{
+		height: 150px;
+	}
+	button{
+		background-color: $green;
+		font-size: 15px;
+		line-height: 24px;
+		color: #fff;
+		@include f500;
+		padding: 11px 35px;
+		border: none;
+		cursor: pointer;
+	}
+}
+.jq-selectbox{
+	max-width: 900px;
+	width: 100%;
+}
+.jq-selectbox__select{
+	max-width: 900px;
+	width: 100%;
+	display: block;
+	border: 1px solid #dddddd;
+	background-color: #f9f9f9;
+	line-height: 24px;
+	padding: 7px 18px;
+	font-size: 15px;
+	color: #707070;
+	cursor: pointer;
+}
+.jq-selectbox__dropdown{
+	max-width: 900px;
+	width: 100%;
+	border: 1px solid #dddddd;
+	background-color: #fff;
+	left: 0px;
+	top: 39px !important;
+	ul li{
+		padding: 7px 18px;
+		&:hover{
+			background-color: #d8d8d8;
+			cursor: pointer;
+		}
+	}
+}
+.jq-selectbox__trigger-arrow{
+	position: absolute;
+	top: 50%;
+	right: 18px;
+	transform: translateY(-50%);
+	&:hover{
+		cursor: pointer;
+	}
+	&::before{
+		content: "\f0d7";
+		font-family: 'icomoon';
+	}
+}
+
+.jq-file{
+	max-width: 900px;
+	width: 100%;
+	border: 1px solid #dddddd;
+	background-color: #f9f9f9;
+	line-height: 24px;
+	padding: 0 18px;
+	height: 40px;
+	font-size: 15px;
+	color: $bg;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	input{
+		cursor: pointer;		
+		z-index: 150;
+	}
+	&.focused{
+		border: 1px solid #000;
+	}
+}
+.jq-file__browse{
+	color: #444444;
+	font-size: 12px;
+	line-height: 22px;
+	font-family: 'Roboto-Regular', sans-serif;
+	font-weight: 400;
+	border: 1px solid #dcdcdc;
+	padding: 0 13px;
+	position: absolute;
+	left: 8px;
+	top: 7px;
+	background-color: #fff;
+}
+.jq-file__name{
+	font-size: 12px;
+	line-height: 24px;
+	color: #707070;
+	font-family: 'Roboto-Regular', sans-serif;
+	font-weight: 400;
+	padding-left: 110px;
+}
+// end upload
+// start withdrawals
+
+.withdrawals__inner{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+.withdrawals__col{
+	max-width: 570px;
+	width: 100%;
+	&:nth-child(1){
+		margin-right: 15px;
+	}
+}
+.withdrawals__box{
+	background-color: #fff;
+	border: 1px solid #dedede;
+}
+.withdrawals__title{
+	font-size: 24px;
+	line-height: 60px;
+	color: $bg;
+	border-bottom: 1px solid #d7d7d7;
+	padding: 2px 33px;
+	@include f500;
+}
+.withdrawals__content{
+	padding: 30px 37px 49px 37px;
+}
+.withdrawals__form-line{
+	margin-bottom: 27px;
+	label{
+		font-size: 16px;
+		color: $bg;
+		margin-bottom: 15px;
+		display: block;
+		@include f500;
+		span{
+			font-size: 20px;
+			color: $green;
+			padding-left: 3px;
+		}
+	}
+	input{
+		display: block;
+		max-width: 492px;
+		width: 100%;
+		border: 1px solid #dddddd;
+		background-color: #f9f9f9;
+		line-height: 24px;
+		padding: 7px 18px;
+		font-size: 15px;
+		color: $bg;
+		cursor: pointer;
+		&::placeholder{
+			color: #707070;
+			font-size: 15px;
+			line-height: 24px;
+		}
+	}
+}
+.withdrawals__form-submit{
+	background-color: $green;
+	font-size: 15px;
+	line-height: 24px;
+	color: #fff;
+	@include f500;
+	padding: 11px 35px;
+	border: none;
+		cursor: pointer;
+}
+
+
+.withdrawals__content .jq-selectbox,
+.withdrawals__content .jq-selectbox__dropdown{
+	max-width: 492px;
+	width: 100%;
+}
+.withdrawals__content .jq-selectbox__select-text{
+	max-width: 492px;
+	width: 100% !important;
+}
+
+
+.withdrawals__content-item{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 13px;
+	line-height: 24px;
+	padding: 9px 20px;
+	@include f700; 
+	text-align: center;
+	color: #444444;
+	&:nth-child(odd){
+		background-color: #f9f9f9;
+	}
+}
+.withdrawals__content-paid{
+	color: $green;
+}
+.withdrawals__content-pending{
+	color: #444444;
+}
+.withdrawals__content-date{
+	width: 95px;
+}
+.withdrawals__content-email{
+	width: 190px;
+}
+.withdrawals__content-price{
+	width: 65px;
+}
+.withdrawals__content-status{
+	width: 55px;
+	margin-left: 10px;
+	text-align: left;
+}
+// end withdrawals
 
 @import 'media';

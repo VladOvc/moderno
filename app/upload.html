@@ -260,7 +260,6 @@
 <!--                 _____CONTENT______                   -->
 <!-- ---------------------------------------------------- -->
 
-
 <section class="search page-search" style="background-image: url(images/search-bg.jpg);">
 	<div class="container">
 		<div class="search__inner">
@@ -284,178 +283,97 @@
 		<div class="breadcrumbs__inner">
 			<ul class="breadcrumbs__list">
 				<li><a href="index.html ">Home</a></li>
-				<li><span>Settings</span></li>
+				<li><span>Upload Product</span></li>
 			</ul>
 		</div>
 	</div>
 </div>
 
-<!-- SECTION PROFILE -->
+<!-- SECTION UPLOAD -->
 
-<section class="profile">
+<section class="upload">
 	<div class="container">
-		<div class="profile__inner">
-			<div class="profile__aside">
+		<form>
+			<div class="upload__inner">
+				<div class="upload__title">Upload Your item</div>
+				<div class="upload__content">
 
-				<!-- copy with 'product-one.html' -->
-				<div class="aside__item">
-					<div class="aside__title">
-						Product Author
+					<div class="upload__line">
+						<label>Select Categories<span>*</span></label>
+						<select>
+							<option value="">Select</option>
+							<option value="">Select</option>
+							<option value="">Select</option>
+							<option value="">Select</option>
+						</select>
 					</div>
-					<div class="product__author-box">
-						<div class="author__avatar">
-							<img src="images/content/avatar.jpg" alt="">
-						</div>
-						<div class="author__info">
-							<div class="author__name">PsdBoss</div>
-							<div class="profile-status profile-on">Online</div>
-						</div>
+
+					<div class="upload__line">
+						<label>Product Name<span>*</span></label>
+						<input type="text" placeholder="Enter your product name here ..." required>
 					</div>
-					<ul class="author__awards-list">
-						<li class="icon-meh-o"></li>
-						<li class="icon-pagelines"></li>
-						<li class="icon-bolt"></li>
-						<li class="icon-foursquare"></li>
-						<li class="icon-cny"></li>
-					</ul>
+
+					<div class="upload__line upload__line-textarea">
+						<label>Product Description<span>*</span></label>
+						<textarea placeholder="<h1> Type your text  here </h1/>" required></textarea>
+					</div>
+
+					<div class="upload__line">
+						<label>Upload Main File<span>*</span></label>
+						<input type="file" required data-placeholder="No File Choosen" data-browse="Choose File">
+					</div>
+
+					<div class="upload__line">
+						<label>Upload Screenshots<span>*</span></label>
+						<input type="file" required data-placeholder="No File Choosen" data-browse="Choose File">
+					</div>
+
+					<div class="upload__line">
+						<label>File Included<span>*</span></label>
+						<select>
+							<option value="">Select File Type</option>
+							<option value="">Select File Type</option>
+							<option value="">Select File Type</option>
+							<option value="">Select File Type</option>
+						</select>
+					</div>
+
+					<div class="upload__line">
+						<label>File Dimensions<span>*</span></label>
+						<input type="text" placeholder="Enter the item  dimentionss here ..." required>
+					</div>
+
+					<div class="upload__line">
+						<label>Item Tags<span>*</span></label>
+						<input type="text" placeholder="Enter Tag Here" required>
+					</div>
+
 				</div>
-				<!-- copy with 'product-one.html' -->
+				<div class="upload__title">Set Your Price (US$)</div>
+				<div class="upload__content">
 
+					<div class="upload__line">
+						<label>Regular License<span>*</span></label>
+						<input type="text" placeholder="$00.00" required>
+					</div>
 
-				<ul class="footer__social-link">
-					<li><a class="link-facebook" href="#"></a></li>
-					<li><a class="link-twitter" href="#"></a></li>
-					<li><a class="link-youtube" href="#"></a></li>
-					<li><a class="link-pinterest" href="#"></a></li>
-					<li><a class="link-linkedin" href="#"></a></li>
-				</ul>
+					<div class="upload__line">
+						<label>Extended License<span>*</span></label>
+						<input type="text" placeholder="$00.00" required>
+					</div>
 
-				<div class="profile__aside-btn">
-					<a href="#" class="profile__aside-message"><span>Send Message</span></a>
-					<a href="#" class="profile__aside-following">Following</a>
+					<div class="upload__line">
+						<label></label>
+						<button type="submit">Submit</button>
+					</div>
+					
 				</div>
-
 			</div>
-			<div class="profile__content">
-
-				<div class="profile__banner">
-					<div class="profile__banner-images">
-						<img src="images/banner.png" alt="">
-					</div>
-				</div>
-				<div class="profile__items">
-					<div class="profile__item">
-						<div class="profile__item-title">Country:</div>            
-						<div class="profile__item-content">England</div>
-					</div>
-					<div class="profile__item">
-						<div class="profile__item-title">Member Since:</div>
-						<div class="profile__item-content">December 26, 2014</div>
-					</div>
-					<div class="profile__item">
-						<div class="profile__item-title">Author Rating:</div>
-						<div class="profile__item-content">
-							<div class="rate-star"></div><span class="brackets">05</span>
-						</div>
-					</div>
-					<div class="profile__item">
-						<div class="profile__item-title">Total Sales:</div>
-						<div class="profile__item-content profile__item-money">$ 5,030</div>
-					</div>
-				</div> 
-								
-			</div>
-		</div>
+		</form>
 	</div>
 </section>
 
-<!-- SECTION PROFILE -->
-
-<!-- SECTION SETTING -->
-
-<section class="settings profile-settings">
-	<div class="container">
-		<div class="settings__tabs">
-			<div class="tabs">
-				<span class="tab active i-user" data-id="1">About Me</span>
-				<span class="tab i-suitcase" data-id="2">Products ( 10 )</span>
-				<span class="tab i-envelope-o" data-id="3">Message Box</span>
-				<span class="tab i-comments-o" data-id="4">Customer Reviews ( 20 )</span>
-				<span class="tab i-users" data-id="5">Followers (100 )</span>
-      </div>
-			<div class="tab_content">
-				<div class="tab-item active-tab" id="1">
-					<div class="personal-box">
-						<div class="personal-box__title">
-							About Me:
-						</div>
-						<div class="personal-box__text">
-							<p>
-                Bimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.  
-              </p>
-						</div>
-						<div class="personal-box__items">
-							<div class="personal-box__title">
-								Skills:
-							</div>
-
-							<div class="personal-box__item">
-								<div class="personal-box__item-head">
-									<div class="personal-box__item-name">
-										Graphic Design
-									</div>
-									<div class="personal-box__item-nummber">
-										80%
-									</div>
-								</div>
-								<div class="personal-box__item-line">
-									<span style="max-width: 80%;"></span>
-								</div>
-							</div>
-
-							<div class="personal-box__item">
-								<div class="personal-box__item-head">
-									<div class="personal-box__item-name">
-										Graphic Design
-									</div>
-									<div class="personal-box__item-nummber">
-										90%
-									</div>
-								</div>
-								<div class="personal-box__item-line">
-									<span style="max-width: 90%;"></span>
-								</div>
-							</div>
-
-							<div class="personal-box__item">
-								<div class="personal-box__item-head">
-									<div class="personal-box__item-name">
-										Graphic Design
-									</div>
-									<div class="personal-box__item-nummber">
-										70%
-									</div>
-								</div>
-								<div class="personal-box__item-line">
-									<span style="max-width: 70%;"></span>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<div class="tab-item" id="2">2</div>
-				<div class="tab-item" id="3">3</div>
-				<div class="tab-item" id="4">4</div>
-				<div class="tab-item" id="5">5</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- SECTION SETTING -->
-
-
+<!-- SECTION UPLOAD -->
 
 		</div>
 <!-- ---------------------------------------------------- -->
